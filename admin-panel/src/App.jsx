@@ -6,7 +6,7 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 
 import AdminLayout from "./layouts/AdminLayout";
 
-import Login from "./pages/auth/Login";
+import Login from "./pages/auth/login";
 
 import Dashboard from "./pages/dashboard/Dashboard";
 
@@ -33,23 +33,10 @@ function App() {
             }
           >
             <Route path="/" element={<Dashboard />} />
-
             <Route path="/workers" element={<Workers />} />
-
-            <Route
-              path="/workers/:id"
-              element={<WorkerDetail />}
-            />
-
-            <Route
-              path="/schemes"
-              element={<Schemes />}
-            />
-
-            <Route
-              path="/notifications"
-              element={<Notifications />}
-            />
+            <Route path="/workers/:id" element={<WorkerDetail />} />
+            <Route path="/schemes" element={<Schemes />} />
+            <Route path="/notifications" element={<Notifications />} />
           </Route>
         </Routes>
       </BrowserRouter>
